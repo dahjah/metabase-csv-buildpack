@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -eu
+
+PLUGIN_VERSION=`cat ./bin/version`
+METABASE_PLUGIN_DIR="$1/plugins"
+PLUGIN_JAR="$METABASE_PLUGIN_DIR/csv.metabase-driver.jar"
+GITHUB_URL="https://github.com/Markenson/csv-metabase-driver/releases/download/$PLUGIN_VERSION/csv.metabase-driver.jar"
+
+
+
+mkdir -p $METABASE_PLUGIN_DIR
+
+echo -n "-----> Downloading CSV Driver... from $GITHUB_URL to $PLUGIN_JAR"
+curl -s --retry 3 -o $PLUGIN_JAR -L $GITHUB_URL
+echo "done"

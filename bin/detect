@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Metabase CSV Driver"
+exit 0
