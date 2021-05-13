@@ -1,4 +1,4 @@
-# metabase-athena-buildpack
+# metabase-CSV-buildpack
 Buildpack for installing the Metabase CSV plugin
 
 ⚠️This is a public repo
